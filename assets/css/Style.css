@@ -1,164 +1,119 @@
-﻿@font-face {
-    font-family: 'Yekan';
-    src: url('../fonts/Yekan.woff') format('woff'), url('../fonts/Yekan.ttf') format('truetype'), url('../fonts/Yekan.eot') format('embedded-opentype');
+﻿.loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #e3e3e3;
 }
-* {
-    margin: 0;
-    font-family: 'Yekan';
-    box-sizing: border-box;
-}
-header {
-    background-color: #C0C0C0;
-    float: right;
-    padding: 30px 160px 0 0; /*------------------------------*/
-    color: #0000FF;
-    height: 200px;
-    direction: rtl;
-    width: 100%;
-}
-.container {
-    background-color: #c0c0c0;
-    height: 600px;
-    width: 100%;
-    padding-top: 40px; /*------------------------------*/
-}
-.context {
-    padding: 30px 20px 0 160px; /*------------------------------*/
-    text-align: justify;
-}
-.about-me {
-    direction: rtl;
-}
-.about-me h4 {
-    color: #0000ff;
-}
-.profile {
-    padding-left: 40px; /*------------------------------*/
-}
-.profile img {
-    border: 3px solid #0000ff;
-    border-radius: 100%;
-    height: 250px;
-    width: 250px;
 
+.loading-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    background-color: #c9c9c9;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    border-radius: 100%;
+    box-shadow: #000 0 0 50px 0 inset;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #9ad3de #89bdd3 #9ad3de #89bdd3;
+    animation-name: anim-loading-box;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-.info {
-    background-color: black;
-    width: 100%;
-    height: 50px;
-    padding: 10px 160px; /*------------------------------*/
-    direction: rtl;
+
+@keyframes anim-loading-box {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
-.info h4 {
-    color: #fff;
-    display: inline-block;
+
+
+
+/*----------------------------------
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../font/Ubuntu.eot') format('embedded-opentype'), url('../font/Ubuntu.ttf') format('truetype'), url('../font/Ubuntu.woff') format('woff'), url('../font/Ubuntu.woff2') format('woff2');
 }
-.info ul {
-    list-style: none;
-    display: inline-block;
-    direction: ltr;
-    float: left;
+
+* {
+    font-family: Ubuntu;
+    margin: 0;
+    box-sizing: border-box;
     padding: 0;
 }
-.info ul li {
-    display: inline-block;
-    color: #fff;
-    padding: 0 20px;
+.wrapper {
+    background-color: #202020;
 }
-.info ul li:first-child {
-    padding-left: 0;
+header {
+    color: #f3f7f8;
+    text-align: center;
+    padding: 20px 0;
 }
-.down {
-    width: 100%; height: 100px; background-color: #c0c0c0;
-}
-footer {
-    background-color: #c0c0c0;
-    height: 160px;
-    width: 100%;
+.profile_img {
     text-align: center;
 }
-footer ul{
+    .profile_img img {
+        border: 5px solid #21c2f8;
+        border-radius: 50%;
+    }
+.about_me, .intrests , .contact{
+    text-align: justify;
+    width: 90%;
+    margin: 10px auto;
+    border: 3px solid #21c2f8;
+    border-radius: 10px;
+    color: #f3f7f8;
+    padding: 10px;
+}
+.skills {
+    text-align: justify;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 10px;
+    color: red;
+}
+
+.progress {
+    width: 80%;
+    margin-bottom: 5px;
+}
+.contact ul {
+    list-style: none;
+}
+.contact ul li {
+    display: inline-block;
+    padding-right: 30px;
+}
+.contact ul li:last-child {
+    padding-right: 0;
+}
+
+footer {
+    width: 90%;
+    margin: 10px auto 0 auto;
+    border-radius: 10px;
+    color: #f3f7f8;
+    padding: 10px;
+    text-align: center;
+}
+footer ul {
     list-style: none;
 }
 footer ul li {
     display: inline-block;
-    padding: 10px 10px; /*------------------------------*/
+    padding: 2px 15px;
 }
-footer ul li img {
-    height: 50px;
-    width: 50px;
-}
-    footer ul li img:hover {
-        height: 55px;
-        width: 55px;
-
-        animation-name: anim-icon;
-        animation-duration: 700ms;
-        animation-direction: alternate;
-        animation-iteration-count: initial;
-        animation-timing-function: ease;
-    }
-    
-@keyframes anim-icon {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}/*----------------------------------------------------------------------------------*/
-/*Small devices (tablets, 768px and up) */
-@media screen and (max-width: 800px) {
-    header {
-        text-align: center;
-        padding: 30px 0 0 0;
-    }
-    .info {
-        height: 150px;
-    }
-    .context {
-        text-align: center;
-    }
-    .profile {
-        float: right;
-    }
-    .about-me {
-        float: right;
-        clear: both;
-    }
-
-    .info h4 {
-        display:block;
-    }
-
-    .info ul {
-        display: block;
-    }
-
-    .info ul li {
-        display: block;
-    }
-
-    footer ul li img {
-        height: 30px;
-        width: 30px;
-    }
-
-    footer ul li img:hover {
-        height: 35px;
-        width: 35px;
-    }
-    .info ul li:first-child {
-        padding-left: 20px;
-    }
-
-    .hide_img {
-        display: inline-block;
-    }
-    .profile {
-        display: none;
-    }
-    footer {
-        height: 250px;
-    }
-}
+--------------------*/
