@@ -1,5 +1,5 @@
-@import url("fonts.css");
-@import url("/css/font-awesome.min.css");
+/* @import url("fonts.css");
+@import url("/css/font-awesome.min.css"); */
 
 /** 
     base style overrides 
@@ -1048,4 +1048,20 @@ footer .footer-social li a {
 
 .details{
 	font-size: 0.6em !important;
+}
+
+
+/* ------ */
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
