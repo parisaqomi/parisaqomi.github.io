@@ -499,7 +499,7 @@ button.large, .button.large {
 }
 button.stroke, .button.stroke {
 	background: transparent !important;
-	border: 3px solid #313131;
+	border: 1px solid #313131;
 	line-height: 4.8rem;
 }
 button.stroke.medium, .button.stroke.medium {
@@ -509,7 +509,7 @@ button.stroke.large, .button.stroke.large {
 	line-height: 5.4rem !important;
 }
 button.stroke:hover, .button.stroke:hover {
-	border: 3px solid #FF0077;
+	border: 1px solid #FF0077;
 	color: #FF0077;
 }
 button::-moz-focus-inner, input::-moz-focus-inner {
@@ -571,9 +571,15 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	height: .6rem;
 	background: #a1a1a1;
 	width: 100%;
-	margin-bottom: 6rem;
+	margin-bottom: 7rem;
 	padding: 0;
 	position: relative;
+}
+
+@media only screen and (max-width:425px){
+	.skill-bars li {
+		margin-bottom: 8rem !important;
+	}
 }
 .skill-bars li strong {
 	position: absolute;
@@ -593,25 +599,25 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 .skill-bars li .progress span {
 	position: absolute;
-	right: 0;
-	top: -3.6rem;
+	right: -15px;
+	top: 1.2rem;
 	display: block;
 	font-family: "poppins-regular", sans-serif;
 	color: white;
 	font-size: 1.1rem;
 	line-height: 1;
-	background: #313131;
+	background: #cc005f;
 	padding: .6rem .6rem;
 	border-radius: 3px;
 }
 .skill-bars li .progress span::after {
 	position: absolute;
 	left: 50%;
-	bottom: -5px;
+	top: -5px;
 	margin-left: -5px;
 	border-right: 5px solid transparent;
 	border-left: 5px solid transparent;
-	border-top: 5px solid #313131;
+	border-bottom: 5px solid #cc005f;
 	content: "";
 }
 
@@ -729,19 +735,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	font-size: 1.3rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;
+	border-radius: 3px;
 }
 .intro-content .button:hover, .intro-content .button:focus {
 	border-color: #cc005f;
-}
-.intro-content .button::after {
-	display: inline-block;
-	content: "\f107";
-	font-family: fontAwesome;
-	font-size: 1.6rem;
-	line-height: inherit;
-	text-align: center;
-	position: relative;
-	left: 1.2rem;
 }
 
 .intro-social {
@@ -831,7 +828,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /** 
  about
  */
-#about {
+#about  ,#portfolio {
 	background: #FFFFFF;
 	padding-top: 8rem;
 }
@@ -1047,4 +1044,8 @@ footer .footer-social li a {
 }
 #go-top a:hover {
 	background: #000000;
+}
+
+.details{
+	font-size: 0.6em !important;
 }
