@@ -19,17 +19,20 @@
     <script src="js/particles.js"></script>
     <script src="p.js"></script>
     <link rel="icon" type="icon" href="Q1.jpg" />
+
+
+
 </head>
 
 <body id="top">
 
     <header>
-     
+
     </header>
 
     <section id="intro">
-           <!-- particles.js container -->
-           <div id="particles-js"></div>
+        <!-- particles.js container -->
+        <div id="particles-js"></div>
 
         <div class="intro-overlay"></div>
 
@@ -216,22 +219,89 @@
         </div>
 
         <div class="row about-content">
+            <div class="col-twelve">
+                <div class="col-six tab-full">
+                    <div class="brd">
+                        <img src="images/at-vc.png" alt="visit-card-sample" class="portfolio-img" />
+                        <span class="image-span-tl"></span>
+                    </div>
+                </div>
+                <div class="col-six tab-full">
+                    <div class="brd">
+                        <img src="images/pq-cv.png" alt="visit-card-sample" class="portfolio-img" />
+                        <span class="image-span-tr"></span>
+                    </div>
 
-            <div class="col-six tab-full">
-
-                
+                </div>
 
             </div>
+            <div class="col-twelve">
 
-            <div class="col-six tab-full">
+                <div class="col-six tab-full">
 
-                
+                    <div class="brd">
+                        <img src="images/farayand.png" alt="visit-card-sample" class="portfolio-img" />
+                        <span class="image-span-bl"></span>
+                    </div>
+
+                </div>
+                <div class="col-six tab-full">
+                    <div class="brd">
+                        <img src="images/innovin.png" alt="visit-card-sample" class="portfolio-img" />
+                        <span class="image-span-br"></span>
+                    </div>
+
+                </div>
             </div>
-
         </div>
 
     </section>
 
+    <section id="contact-form">
+
+        <div class="row section-intro">
+            <div class="col-twelve">
+                <!-- <h5>form</h5> -->
+                <!-- <h1>Let me introduce myself.</h1> -->
+                <div class="intro-info">
+                    <p class="lead"> If you have any advice for me or any other thing please send me email. I'll ansewr you as soon as posible! </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row about-content">
+            <form class="myForm" method="get" enctype="application/x-www-form-urlencoded"
+                action="/html/codes/html_form_handler.cfm">
+
+                <p>
+                    <label>Name
+                        <input type="text" name="name" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>Email
+                        <input type="email" name="email" required>
+                    </label>
+                </p>
+                <p>
+                    <label>subject
+                        <input type="text" name="subject" required> 
+                    </label>
+                </p>
+                <p>
+                    <label>Message
+                        <textarea name="comments" maxlength="500" required></textarea>
+                    </label>
+                </p>
+
+                <p><button type="submit" class="send-mail">Send Email </button></p>
+
+            </form>
+        </div>
+
+    </section>
     <footer>
         <div class="row">
 
@@ -260,28 +330,29 @@
     </div>
     <script src="../particles.js"></script>
     <script src="js/app.js"></script>
-    
+
     <!-- stats.js -->
     <script src="js/lib/stats.js"></script>
     <script>
-      var count_particles, stats, update;
-      stats = new Stats;
-      stats.setMode(0);
-      stats.domElement.style.position = 'absolute';
-      stats.domElement.style.left = '0px';
-      stats.domElement.style.top = '0px';
-      document.body.appendChild(stats.domElement);
-      count_particles = document.querySelector('.js-count-particles');
-      update = function() {
-        stats.begin();
-        stats.end();
-        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-          count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-        }
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function () {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
         requestAnimationFrame(update);
-      };
-      requestAnimationFrame(update);
     </script>
+
 </body>
 
 </html>
