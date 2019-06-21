@@ -34,12 +34,27 @@
         <!-- particles.js container -->
         <div id="particles-js"></div>
 
-        <div class="intro-overlay"></div>
+        <!-- 
+        <div class="intro-overlay"></div> -->
 
         <div class="intro-content">
+            <nav class="site-nav">
+                <!-- <h1 class="logo">Hamburger<span> Navigation</span></h1> -->
+
+                <div class="menu-toggle">
+                    <div class="hamburger" style="float: right;"></div>
+                </div>
+
+                <ul class="open desktop">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#portfolio">Portfolios</a></li>
+                    <li><a href="#contact-form"></i>Contact me</a></li>
+                </ul>
+            </nav>
             <div class="row">
 
-                <div class="col-twelve">
+                <div class="col-twelve mt-7">
 
                     <!--<h5>Hello, World.</h5>-->
                     <h1>I'm Parisa Qomi.</h1>
@@ -264,7 +279,8 @@
                 <!-- <h5>form</h5> -->
                 <!-- <h1>Let me introduce myself.</h1> -->
                 <div class="intro-info">
-                    <p class="lead"> If you have any advice for me or any other thing please send me email. I'll ansewr you as soon as posible! </p>
+                    <p class="lead"> If you have any advice for me or any other thing please send me email. I'll ansewr
+                        you as soon as posible! </p>
                 </div>
 
             </div>
@@ -287,7 +303,7 @@
                 </p>
                 <p>
                     <label>subject
-                        <input type="text" name="subject" required> 
+                        <input type="text" name="subject" required>
                     </label>
                 </p>
                 <p>
@@ -353,6 +369,14 @@
         requestAnimationFrame(update);
     </script>
 
+    <script>
+        $('.menu-toggle').click(function () {
+
+            $('ul').toggleClass('opening');
+            $(this).toggleClass('open');
+
+        })
+    </script>
 </body>
 
 </html>
