@@ -1226,7 +1226,7 @@ footer .footer-social {
 	display: inline-block;
 	font-size: 2.1rem;
 	margin: 0;
-	padding: 10px;
+	padding: 10px 10px 0 10px;
 	position: relative;
 }
 
@@ -1263,7 +1263,6 @@ footer .footer-social li a {
 		display: block;
 		width: 100%;
 		text-align: center;
-		margin-bottom: 1.5rem;
 	}
 
 	footer .copyright span {
@@ -1395,7 +1394,7 @@ footer .footer-social li a {
 
 .myForm input,
 .myForm textarea {
-	margin-left: 2em;
+	margin-left: 0.5em;
 	float: right;
 	width: 85%;
 	border: 1px solid #ccc;
@@ -1586,4 +1585,10 @@ nav a {
 footer{
 	min-height: 7%;
 	background: #313131;
+}
+
+@media only screen and (max-width:769px){
+	footer .footer-social {
+		 padding:0 10px; 
+	}
 }
